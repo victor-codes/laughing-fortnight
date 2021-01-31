@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  font: 62.5% "Futura", sans-serif;
+  box-sizing: border-box;
+}
+
+.App {
+  /* text-align: center; */
+}
+@media only screen and (max-width: 768px) {
+  .App {
+    padding: 0 16px;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input__field {
+  position: relative;
+  max-width: 1140px;
+  margin: auto;
+}
+
+input {
+  height: 56px;
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 0 12px 0 40px;
+  border: 2px solid #e8e8e8;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.image__container {
+  max-width: 1140px;
+  margin: 40px auto;
+}
+
+.input-icon {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+}
+
+.w-6 {
+  width: 24px;
+  height: 24px;
+}
+
+.image {
+  position: relative;
+  width: fit-content;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.image:hover .image__overlay {
+  opacity: initial;
+}
+
+.image__overlay {
+  opacity: 0;
+  position: absolute;
+  left: 0 !important;
+  right: 0 !important;
+  width: -webkit-fill-available;
+  height: 100%;
+  z-index: 10;
+  border-radius: 32px;
+  background-color: rgba(0, 0, 0, 0.1);
+  will-change: display;
+  transition: opacity ease-out 400ms;
+}
+
+.image__info {
+  width: 312px;
+  height: 312px;
+}
+
+.image__info img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 32px;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px !important;
+  cursor: pointer;
+}
+
+.photographer {
+  font-size: 1.8rem;
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
+  color: #ffffff;
+  z-index: 99;
+}
