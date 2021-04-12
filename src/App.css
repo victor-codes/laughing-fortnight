@@ -8,6 +8,7 @@
 .App {
   /* text-align: center; */
 }
+
 @media only screen and (max-width: 768px) {
   .App {
     padding: 0 16px;
@@ -69,10 +70,39 @@ input:focus {
   outline: none;
 }
 
+@media only screen and (min-width: 900px) {
+  .image__container {
+    grid-template-columns: repeat(auto-fit, minmax(0, 312px));
+    grid-template-rows: auto;
+  }
+}
+
+/* @media only screen and (min-width: 600px) {
+  .image__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+} */
+
+.image__container {
+  display: -webkit-box;
+  width: 100%;
+  column-gap: 32px;
+  row-gap: 32px;
+  justify-content: center;
+}
+
 .image__container {
   max-width: 1140px;
   margin: 40px auto;
 }
+
+/* display: block;
+flex-basis: 0;
+-webkit-box-flex: 1;
+flex-grow: 1;
+flex-shrink: 1;
+margin-right: 1.45rem; */
 
 .input-icon {
   position: absolute;
@@ -87,7 +117,6 @@ input:focus {
 
 .image {
   position: relative;
-  width: fit-content;
   border-radius: 32px;
   cursor: pointer;
 }
@@ -102,7 +131,7 @@ input:focus {
   left: 0 !important;
   right: 0 !important;
   width: -webkit-fill-available;
-  height: 100%;
+  /* height: 100%; */
   z-index: 10;
   border-radius: 32px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -111,12 +140,13 @@ input:focus {
 }
 
 .image__info {
-  width: 312px;
-  height: 312px;
+  width: -webkit-fill-avialiable;
+  /* height: 312px; */
 }
 
 .image__info img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 32px;
 }
@@ -130,6 +160,7 @@ input:focus {
 
 .photographer {
   font-size: 1.8rem;
+  margin: 0;
   position: absolute;
   left: 20px;
   bottom: 12px;
