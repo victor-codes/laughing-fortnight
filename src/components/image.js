@@ -18,3 +18,4 @@ export default function Image({ image, link, photographer }) {
     </div>
   );
 }
+
